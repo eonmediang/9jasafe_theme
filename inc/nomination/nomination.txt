@@ -1,0 +1,10 @@
+New form submitted by: {{{sender}}}
+Nominee: {{{nominee}}}
+Category: {{{category}}}
+Nominee's email or website: {{{nom_email}}}
+Nominee's phone number: {{{nom_phone}}}
+Voter's name: {{{sender}}}
+Voter's Company/Orgamisation: {{{voter_org}}}
+Voter's Phone number: {{{voter_phone}}}
+Voter's email/website: {{{voter_email}}}
+Summary of eligibility: {{{eligibility}}}

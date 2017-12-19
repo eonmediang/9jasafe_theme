@@ -1,0 +1,749 @@
+/*
+Theme Name: 9jasafe 2018 theme
+Theme URI: http://underscores.me/
+Author: Abeeb Ola
+Author URI: http://abeebola.com/about-me
+Description: Theme created by Abeeb 聖徒 Ola
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: naijasafe
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+9jasafe theme is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+## Menus
+--------------------------------------------------------------*/
+.main-navigation {
+	clear: both;
+	display: block;
+	float: left;
+	width: 100%;
+}
+
+.main-navigation ul {
+	display: none;
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+
+.main-navigation li {
+	float: left;
+	position: relative;
+}
+
+.main-navigation a {
+	display: block;
+	text-decoration: none;
+}
+
+.main-navigation ul ul {
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	float: left;
+	position: absolute;
+	top: 1.5em;
+	left: -999em;
+	z-index: 99999;
+}
+
+.main-navigation ul ul ul {
+	left: -999em;
+	top: 0;
+}
+
+.main-navigation ul ul a {
+	width: 200px;
+}
+
+.main-navigation ul ul li {
+
+}
+
+.main-navigation li:hover > a,
+.main-navigation li.focus > a {
+}
+
+.main-navigation ul ul :hover > a,
+.main-navigation ul ul .focus > a {
+}
+
+.main-navigation ul ul a:hover,
+.main-navigation ul ul a.focus {
+}
+
+.main-navigation ul li:hover > ul,
+.main-navigation ul li.focus > ul {
+	left: auto;
+}
+
+.main-navigation ul ul li:hover > ul,
+.main-navigation ul ul li.focus > ul {
+	left: 100%;
+}
+
+.main-navigation .current_page_item > a,
+.main-navigation .current-menu-item > a,
+.main-navigation .current_page_ancestor > a,
+.main-navigation .current-menu-ancestor > a {
+}
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+}
+
+.site-main .comment-navigation,
+.site-main .posts-navigation,
+.site-main .post-navigation {
+	margin: 0 0 1.5em;
+	overflow: hidden;
+}
+
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+	float: left;
+	width: 50%;
+}
+
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+}
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar. */
+}
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+	outline: 0;
+}
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after {
+	content: "";
+	display: table;
+	table-layout: fixed;
+}
+
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after {
+	clear: both;
+}
+
+/* Make sure select elements fit in widgets. */
+.widget select {
+	max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+.sticky {
+	display: block;
+}
+
+.hentry {
+	margin: 0 0 1.5em;
+}
+
+.byline,
+.updated:not(.published) {
+	display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+.comment-content a {
+	word-wrap: break-word;
+}
+
+.bypostauthor {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll .posts-navigation, /* Older / Newer Posts Navigation (always hidden) */
+.infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
+	display: none;
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+.infinity-end.neverending .site-footer {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+.wp-caption {
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+
+.wp-caption-text {
+	text-align: center;
+}
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+.gallery {
+	margin-bottom: 1.5em;
+}
+
+.gallery-item {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+	max-width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+	max-width: 33.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+	max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+	max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+	max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+	max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+	max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+	max-width: 11.11%;
+}
+
+.gallery-caption {
+	display: block;
+}
+
+/************* Site specific ****************/
+a { color: #126b29; }
+.form-control, .bdr0 { border-radius: 0; }
+.mgt0 { margin-top: 0;}
+.fw { width: 100%;}
+
+/*****************************************
+************	Typography  **************
+******************************************/
+
+@font-face { font-family: 'Open Sans Extrabold'; src: url('assets/fonts/OpenSans-ExtraBold.ttf'); }
+@font-face { font-family: 'Open Sans'; src: url('assets/fonts/OpenSans-Regular.ttf'); }
+body { font-family: 'Open Sans', sans-serif; font-weight: normal; font-size: 16px; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased;}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 { font-weight: 500; font-family: 'Oswald', sans-serif; color: #126b29; }
+h1, h2 { line-height: 1.4; }
+h4 { font-size: 22px; }
+.indented { padding-left: 15px; display: block;}
+
+
+/************* Header ****************/
+#masthead { padding: 10px 0; background-color: #fff; min-height: 50px; box-shadow: 0px 4px 4px rgba(0,0,0,0.2); position: fixed; top: 0; left: 0; right: 0; z-index: 500;}
+.admin-bar #masthead { margin-top: 32px; }
+#page { margin-top: 70px; }
+.site-branding, .open-side-nav { display: none; }
+.page-template header.entry-header { display: none; }
+
+/*********** Navigation **************/
+#primary-menu { float: right; display: block;  }
+.menu-toggle { display: none; }
+.nav-menu > li > a { padding: 0 12px; line-height: 50px; color: #252525; font-weight: 600; text-transform: capitalize;}
+.nav-menu li a { color: #252525; font-weight: 600; text-transform: capitalize;}
+.nav-menu  li a:hover { color: #038b30; }
+.main-navigation ul ul { top: 100%; background-color: #fff; }
+.menu-item:hover > .sub-menu { display: block; padding-bottom: 10px; }
+.main-navigation ul ul a { padding: 8px 12px; width: auto; max-width: 200px; }
+.main-navigation ul ul li { width: 100%; }
+.open-side-nav { float: left; width: 22px; height: 22px; text-align: center; padding: 0 5px; margin-top: 6px; font-size: 1.3em; z-index: 88;}
+.menu-drop { position: absolute; top: 0; right: 0; line-height: 50px; width: 30px; text-align: right; display: none; }
+
+/*********** Content **************/
+#home-jumbotron { height: 500px; position: relative; }
+.nom-action { padding: 30px 15px; font-weight: 600; color: #fff; }
+.nom-action p { font-size: 2em; }
+.nom-j { padding: 30px 0; color: #fff; }
+.sponsor-us { padding: 80px; font-size: 4.4em; }
+.sp-reasons { padding-left: 15px; font-size: 16px; line-height: 1.6; }
+.about-gala { background: url('/wp-content/themes/naijasafe/assets/img/gala-venue.jpg') center top fixed no-repeat; background-size: cover; }
+.about-gala h1 { font-size: 3em; padding: 30px 0; }
+.sponsor-us, .about-gala h1 { color: #fff; text-shadow: 3px 3px 6px black; }
+
+/********** Homepage *************/
+.home-section { padding: 50px 20px; margin-bottom: 0; }
+.social-glide { position: absolute; width: 350px; top: 0; bottom: 0; }
+.social-glide.md { width: 450px; }
+.social-glide.left { left: 0; background: url(/wp-content/themes/naijasafe/assets/img/endorsements/grad-l-bg.png) rgba(0, 0, 0, 0.49); background: linear-gradient(to left, transparent, rgba(0, 0, 0, 0.52), rgba(0, 0, 0, 0.86));}
+.social-glide.right { right: 0; background: url(/wp-content/themes/naijasafe/assets/img/endorsements/grad-r-bg.png) rgba(0, 0, 0, 0.49); background: linear-gradient(to right, transparent, rgba(0, 0, 0, 0.52), rgba(0, 0, 0, 0.86));}
+.social-glide > ul { float: right; padding: 10px 0 0; margin-top: 50px; width: 100px; overflow: hidden; }
+.social-glide .link { display: table; color: #fff !important; border-radius: 50%; padding: 0 10px; margin-left: 250px; transition: margin cubic-bezier(0.69, 0, 0.26, 1.01) .3s; clear: both; margin-bottom: 15px; }
+.social-glide .link.done { margin-left: 0; }
+.social-glide .link:hover > a { box-shadow: 0 0 6px 5px rgba(255, 255, 255, 0.85); }
+.social-glide .link > a { display: table-cell; vertical-align: middle; width: 45px; height: 45px; text-align: center; color: #fff !important; font-size: 1.8em; border-radius: 50%; }
+#welcome > h1 { max-width: 700px; margin: 0 auto; margin-bottom: 30px; padding-bottom: 20px; font-size: 2.2em; }
+.home-tube { padding: 30px 0; margin-bottom: 50px; }
+.yvideo { width: 100%; max-width: 650px; height: 415px; }
+.nom-cat { margin-bottom: 5px; }
+.nom-cat > header { border: 1px solid #e2e2e2; position: relative; cursor: pointer; }
+.nom-cat > header > span, .nom-cat .arrow { padding: 10px; display: inline-block; }
+.nom-cat > header .arrow { position: absolute; top: 0; right: 0; }
+.nom-cat .body { padding: 15px 20px; background-color: #f5f5f5; display: none;}
+/*.nom-cat .body { display: block; }*/
+.nom-cat .body.active { display: block; }
+/*.nom-cat > header > span { padding: 6px 0; display: inline-block; }*/
+#welcome { font-size: 16px; }
+
+/********** 9jaSAFE 2015 *************/
+#n2015 { background: url('/wp-content/themes/naijasafe/assets/img/916.jpg') center top fixed no-repeat; }
+#n2016 { background: url('/wp-content/themes/naijasafe/assets/img/918.jpg') center top fixed no-repeat; }
+#n2015, #n2016 { height: 400px; position: relative; background-size: cover; }
+article.desc { font-size: 1.3em; }
+.social-glide .shout { font-size: 3.2em; font-weight: 700; font-family: 'Montserrat', 'Oswald', sans-serif; color: #fff; padding: 30px; text-shadow: -1px 4px 7px black; }
+
+
+/*********** Sidebars ************/
+#secondary { padding-top: 20px; }
+.sidebar .widget { padding: 10px 15px; margin-bottom: 10px; }
+.sidebar .widget-title { margin-top: 0; margin-bottom: 20px; }
+
+/************ Footer ************/
+.footer-widget { margin-bottom: 40px; }
+.footer-widget .widget-title { margin-bottom: 20px; }
+.site-info { text-align: center; color: #126b29; padding: 10px 0; border-top: 1px solid #0e0e0e; }
+.social-footer { padding: 0; list-style: none; font-size: 1.2em; font-family: 'Oswald', sans-serif; }
+.social-footer > li { padding-bottom: 10px; }
+.social-footer .fa { font-size: 1.3em; }
+
+
+/************* UI *****************/
+/*input[type="button"], input[type="submit"], button { background-color: #126b29; border-color: #126b29;color: #fff; }*/
+.btn { background-color: #109e35; color: #fff; border-color: transparent !important; }
+.btn:hover, .btn:active { background-color: #126b29; outline-color: #126b29; color: #fff; }
+.bgold { color: #000; background-color: #ffd700; }
+.cgold { color: #ffd700 !important; }
+.bgold:hover { color: #000; background-color: #FFC107; }
+.bgold:focus, .bgold:active { outline-color: #FFC107; }
+.b-quote { padding: 30px; margin-top: 40px; background-color: #eaeaea; border-radius: 0px 20px 0 20px; }
+.nom-btn { display: inline-block; width: 100%; text-align: right; }
+.toast { float: left; font-size: 16px; background-color: #fff; width: 100%; box-shadow: 0px 7px 16px 4px rgba(0, 0, 0, 0.32); margin-bottom: 30px; }
+.toast.right { float: right; }
+.toast .content { padding: 20px 25px; }
+.toast header { height: 5px; background-color: #74b32a; }
+.toast.lg { width: 80%; margin-bottom: 50px; }
+.toast .fx { width: 100%; }
+.action-loader img { width: 20px; height: 20px; margin-right: 15px; }
+.imp { transition: all .6s cubic-bezier(0.74, 0.04, 0.12, 1.06); padding: 0 20px; margin-top: 20px; border-left: 6px solid #639e1d; }
+.img-responsive { margin: 0 auto; }
+
+/*Spinner*/
+
+.log-spin {
+    width: 20px;
+	height: 20px;
+	display: inline-block;
+    border-radius: 50%;
+    border: 3px solid #EEEEEE;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+    -webkit-animation: log-spin 1s infinite ease-in-out;
+    animation: log-spin 1s infinite ease-in-out;
+}
+
+
+
+@-webkit-keyframes log-spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(540deg);
+        transform: rotate(540deg);
+    }
+}
+
+@keyframes log-spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(540deg);
+        transform: rotate(540deg);
+    }
+}
+
+/* Social icons */
+.fb { background-color: #3A5795; transition-duration: 0.2s }
+.twtr { background-color: #55acee; transition-duration: 0.25s }
+.insta { background-color: #3f729b; transition-duration: 0.3s }
+.linkedin { background-color: #0077b5; transition-duration: 0.35s }
+
+/********** Miscallenous **********/
+.no-overflow { overflow: hidden; }
+span.caption { text-align: center; display: block; margin: 0 auto; font-style: italic; font-size: 0.9em; padding-top: 20px; }
+
+/*********** Modals ***************/
+#modal-bg { display: none; position: fixed; top: 0; left: 0; padding-top: 50px; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.56); z-index: 100000;}
+.modal-content { background-color: #fff; width: 95%; max-width: 850px; margin: 0 auto; max-height: 700px; overflow-y: auto;}
+/************* Footer *************/
+.site-footer { background: url('/wp-content/themes/naijasafe/assets/img/p51.png'); padding: 30px 0; }
+.site-footer a { color: #d8d8d8; text-decoration: none; }
+.site-footer a:hover { color: #04c135; }
+
+/* ========== Media Queries ============ */
+
+/* Min widths */
+
+@media screen and (min-width: 480px) {
+
+	.site-branding, .header-ad { max-width: 100%; width: 100%; float: left; }
+
+}
+
+@media screen and (min-width: 768px) {
+
+.s-bg { height: 350px; overflow-y: scroll; }
+#posts-sidebar { display: block; }
+
+}
+
+@media screen and (min-width: 992px) {
+
+	.social-glide { display: block; }
+
+
+}
+
+@media screen and (min-width: 1200px) {
+
+
+}
+
+@media screen and (min-width: 1320px) {
+
+
+}
+
+/* Max widths */
+
+@media screen and (max-width: 1366px) {
+
+	body.single-post .attachment-post-thumbnail { max-height: 400px; }
+}
+
+@media screen and (max-width: 1200px) {
+
+}
+
+@media screen and (max-width: 1100px) {
+
+	#caption .caption-thumb { display: none; }
+}
+
+@media screen and (max-width: 1024px) {
+
+	button.menu-toggle { display: none; }
+	#primary-menu .sub-menu { padding-left: 15px; }
+	.close-side-nav, .open-side-nav, #mobile-search-icon { display: block; }
+	.nav-bar, .logo-bar { width: 100%; }
+	.nav-menu > li { width: 100%; border-top: 1px solid #dedede; }
+	#primary-menu { padding-top: 15px; float: none; display: none; }
+	.main-navigation ul ul.sub-menu { left: auto; position: relative; width: 100%; box-shadow: none; }
+	.sub-menu > li { width: 100%; }
+	.main-navigation ul ul a { padding: 0px 12px; width: 100%; line-height: 50px;}
+	.menu-drop { display: block; }
+	li.menu-item-has-children > a { margin-right: 40px; }
+}
+
+@media screen and (max-width: 800px) {
+
+.site-main { width: 70%; }
+.sidebar { width: 30%; }
+#home-jumbotron { height: 400px; }
+
+}
+
+@media screen and (max-width: 782px) {
+
+.admin-bar .site-header { margin-top: 46px; }
+
+}
+
+@media screen and (max-width: 768px) {
+
+.site-main, .sidebar { width: 100%; }
+/*.site-logo { margin-left: 30%; }*/
+/*#mobile-menu-mask.active, #site-navigation { display: block;}*/
+#site-navigation.move-in { transform: translateX(-300px); -webkit-transform: translateX(-300px); -moz-transform: translateX(-300px); -o-transform: translateX(-300px); -ms-transform: translateX(-300px);}
+#site-navigation.move-out { transform: translateX(300px); -webkit-transform: translateX(300px); -moz-transform: translateX(300px); -o-transform: translateX(300px); -ms-transform: translateX(300px);}
+.toast { float: none !important; margin-left: auto; margin-right: auto; width: 100% !important; max-width: 600px; }
+.social-glide > ul { width: 70px; }
+.social-glide .link > a { width: 36px; height: 36px; font-size: 1.3em; }
+}
+
+@media screen and (max-width: 767px) {
+
+	.social-glide { display: none; }
+	.footer-widget .widget-title { text-align: center; }
+}
+
+@media screen and (max-width: 760px) {
+
+
+}
+
+@media screen and (max-width: 700px) {
+
+	.nom-action p { font-size: 1.8em; }
+	.nom-action { padding: 20px 10px; }
+}
+
+@media screen and (max-width: 600px) {
+
+	.site-logo { width: 85%; float: right; margin-left: 0; }
+	#home-jumbotron { height: 350px; }
+
+}
+
+@media screen and (max-width: 480px) {
+
+	.sponsor-us, .about-gala h1 { font-size: 32px; }
+	.sponsor-us { padding: 40px; }
+	.b-sponsor { width: 200px; margin: 0 auto; }
+	.yvideo { height: 300px; }
+	h1, h2, h3 { line-height: 140%; }
+	.home-section { padding: 20px 0px; }
+	#home-jumbotron { height: 300px; }
+	.nom-action p { font-size: 1.5em; }
+	h1 { font-size: 1.8em !important; }
+	h2 { font-size: 1.5em !important; }
+	h3 { font-size: 1.2em !important; }
+	#n2015 { height: 250px; }
+
+}
+
+@media screen and (max-width: 450px) {
+
+	.btn { margin-bottom: 10px; width: 96%; }
+	#modal-bg { padding-top: 30px; }
+
+}
+
+
+
+/* Max heights */
+@media screen and (max-height: 768px) {
+
+	.modal-content { max-height: 650px; }
+
+}
+
+@media screen and (max-height: 680px) {
+
+	.modal-content { max-height: 600px; }
+
+}
+
+@media screen and (max-height: 650px) {
+
+	.modal-content { max-height: 570px; }
+
+}
+
+@media screen and (max-height: 600px) {
+
+	.modal-content { max-height: 520px; }
+
+}
+
+@media screen and (max-height: 520px) {
+
+	.modal-content { max-height: 450px; }
+
+}
+
+@media screen and (max-height: 480px) {
+
+	.modal-content { max-height: 420px; }
+
+}
+
+@media screen and (min-width: 1024px ) and ( max-width: 1060px) {
+
+	.site-logo { padding-left: 38px; }
+
+}

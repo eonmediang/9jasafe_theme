@@ -1,0 +1,25 @@
+{
+	"server":"localhost",
+	"db":"naijanom",
+	"username":"test_user",
+	"password":"test_pass",
+	"nom_data":{
+		"categories":{
+			"achievements":"9jaSAFE Achievements Awards",
+			"company_year":" 9jaSAFE Company of the Year Corporate, Multi-site or Single-site",
+			"fleet_safety":"9jaSAFE Fleet Safety Awards",
+			"guardian_angel":"9jaSAFE Guardian Angel Awards",
+			"hse_manager":"9jaSAFE HSE Manager of the Year Awards",
+			"pacesetter":"9jaSAFE Corporate Pacesetter Awards",
+			"school_safety":"9jaSAFE School Safety Awards",
+			"social_media":"9jaSAFE Best Use of Social Media Awards",
+			"torch_bearer":"9jaSAFE Torch Bearers Award"
+		}
+	},
+	"email":{
+		"host":"mail.safetyrecordng.com",
+		"port":"26",
+		"username":"info@safetyrecordng.com",
+		"password":"Safety_nigeri@"
+	}
+}

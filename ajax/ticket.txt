@@ -1,0 +1,7 @@
+New ticket order
+Full name: {{{fullname}}}
+Phone number: {{{phone}}}
+E-mail: {{{email}}}
+Company/Orgamisation {{{comp_org}}}
+Website {{{website}}}
+Ticket type {{{ticket_type}}}
